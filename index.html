@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>⚡ Number Converter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Particle Background -->
+  <canvas id="particles"></canvas>
+
+  <!-- Sounds -->
+  <audio id="clickSound" src="https://www.soundjay.com/buttons/sounds/button-16.mp3"></audio>
+  <audio id="successSound" src="https://www.soundjay.com/buttons/sounds/button-3.mp3"></audio>
+
+  <!-- Main UI -->
+  <div class="container">
+
+    <h1>⚡ Number Converter</h1>
+
+    <input type="text" id="inputNumber" placeholder="Enter number...">
+
+    <div class="dropdowns">
+      <select id="fromBase">
+        <option value="10">Decimal</option>
+        <option value="2">Binary</option>
+        <option value="16">Hexadecimal</option>
+      </select>
+
+      <span>➡</span>
+
+      <select id="toBase">
+        <option value="2">Binary</option>
+        <option value="10">Decimal</option>
+        <option value="16">Hexadecimal</option>
+      </select>
+    </div>
+
+    <button onclick="convert()">Convert</button>
+
+    <div class="result-box">
+      <h2 id="result">Result</h2>
+      <p id="steps"></p>
+    </div>
+
+    <div class="actions">
+      <button onclick="copyResult()">📋 Copy</button>
+      <button onclick="toggleDarkMode()">🌙 Mode</button>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
